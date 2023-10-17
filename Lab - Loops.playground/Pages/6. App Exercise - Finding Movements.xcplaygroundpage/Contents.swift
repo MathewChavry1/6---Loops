@@ -8,10 +8,19 @@
 
  Loop through `movementHeartRates` below and if the heart rate doesn't fall between `lowHR` and `highHR`, continue to the next movement and heart rate. Otherwise, print "You could go <INSERT MOVEMENT HERE>."
  */
+
+import Foundation
+
 let lowHR = 110
 let highHR = 125
 var movementHeartRates: [String: Int] = ["Walking": 85, "Running": 120, "Swimming": 130, "Cycling": 128, "Skiing": 114, "Climbing": 129]
-
+for (key, value) in movementHeartRates{
+    if(value > lowHR && value < highHR){
+        print("You could go \(key)")
+    }else{
+        print("\(key) is \(value)")
+    }
+}
 
 /*:
  _Copyright © 2021 Apple Inc._
